@@ -1,6 +1,7 @@
 # SemiReq-Hub: AI-Powered Chip Requirement Lifecycle Manager
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+[![LangChain](https://img.shields.io/badge/LangChain-0.2+-orange.svg)](https://www.langchain.com/)
 [![LLM](https://img.shields.io/badge/LLM-DeepSeek--R1%20%7C%20Qwen-green.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)]()
 
@@ -57,6 +58,7 @@ SemiReq-Hub (Intelligent Requirement Lifecycle Tracer) leverages Large Language 
 | Layer | Technology |
 |-------|-----------|
 | Language | Python 3.10+ |
+| LLM Framework | **LangChain 0.2+** |
 | LLM | DeepSeek-R1 / Qwen (OpenAI-compatible API) |
 | Data | OpenPyXL (Excel), JSON |
 | Concurrency | ThreadPoolExecutor |
@@ -68,9 +70,9 @@ SemiReq-Hub (Intelligent Requirement Lifecycle Tracer) leverages Large Language 
 # 1. Install dependencies
 pip install -r requirements.txt
 
-# 2. Configure LLM (edit src/llm_client.py)
-#    Set MODEL_CHOICE = "local" or "siliconflow"
-#    Set your API key via environment variable
+# 2. Configure LLM
+#    Set MODEL_CHOICE via environment variable: "local", "siliconflow", or "auto"
+#    Set API keys via environment variables
 
 # 3. Test connection
 python src/llm_client.py
@@ -107,7 +109,7 @@ python main.py --no-spec-provider
 │   ├── data_models.py             # Data models
 │   └── logging_audit_module.py    # Audit logging
 ├── data/config/
-│   ├── 芯片需求结构化定义规范V4.0.json  # Spec JSON (single source of truth)
+│   ├── 芯片需求结构化定义规范V4.1.json  # Spec JSON (single source of truth)
 │   ├── categories.dbV4.1.json           # Category taxonomy (auto-derived from spec)
 │   └── Master_Requirement_Templates.json # Master template library
 ├── script/
@@ -115,13 +117,19 @@ python main.py --no-spec-provider
 │   ├── extract_doc_text.py     # NEW: Extract text from .doc spec files
 │   ├── 需求表格预处理.py         # Pre-process raw requirement Excel files
 │   └── 完整模板补充.py           # Template chain completion
-├── output/                  # Generated reports
+├── api/                      # FastAPI backend
+│   ├── main.py               # API entry
+│   ├── schemas.py            # Pydantic models
+│   └── routers/              # API routes
+├── frontend/                 # Streamlit frontend
+│   └── app.py                # Web UI
+├── output/                   # Generated reports
 └── requirements.txt
 ```
 
 ### Spec-Driven Mode (NEW V4.1)
 
-Starting from V4.1, categories are **auto-derived** from `芯片需求结构化定义规范V4.0.json`.
+Starting from V4.1, categories are **auto-derived** from `芯片需求结构化定义规范V4.1.json`.
 No more manual maintenance of `categories.dbV4.1.json`.
 
 ```
@@ -133,7 +141,7 @@ No more manual maintenance of `categories.dbV4.1.json`.
          │
          │  LLM parsing (one-time, on major spec updates)
          ▼
-芯片需求结构化定义规范V4.0.json  ←── single source of truth
+芯片需求结构化定义规范V4.1.json  ←── single source of truth
          │
          │  SpecDataProvider (auto-derive at runtime)
          ├──────────────────────────────────
@@ -145,7 +153,7 @@ No more manual maintenance of `categories.dbV4.1.json`.
               pipeline.py (runs as before)
 ```
 
-**Token efficiency**: The category tree sent to LLM is only ~7KB (209 lines of compact metadata), NOT the full spec text. This is identical to the previous approach.
+**Token efficiency**: The category tree sent to LLM is only ~7KB (209 lines of compact metadata), NOT the full spec text.
 
 ### Key Features
 
@@ -157,6 +165,49 @@ No more manual maintenance of `categories.dbV4.1.json`.
 - **Human-in-the-Loop**: Full audit trail for every AI decision
 - **Template Library**: Parameterized requirement templates with variable extraction
 - **Smart Sync Tool**: `script/sync_config.py` validates and auto-generates configs from spec
+
+### LangChain Integration (V4.2)
+
+#### Why LangChain?
+
+| Aspect | Before | After (LangChain) |
+|--------|--------|-------------------|
+| **LLM Client** | Hand-written OpenAI API calls | `ChatOpenAI` with built-in retry |
+| **Fallback Mechanism** | Manual fallback logic | `.with_fallbacks([...])` one-liner |
+| **Prompt Management** | Hardcoded strings | `ChatPromptTemplate` structured templates |
+| **JSON Parsing** | Fragile `find('{') + rfind('}')` | Pydantic models + manual format instructions |
+| **Output Validation** | Manual field extraction | Automatic Pydantic validation |
+
+#### Key Changes
+
+**1. LLM Client (`src/llm_client.py`)**
+- Replaced manual `OpenAI()` calls with `ChatOpenAI()` from `langchain-openai`
+- Added built-in retry (`max_retries=3`) and timeout (`timeout=30`)
+- Implemented automatic fallback between local and cloud models using `.with_fallbacks()`
+- Separated JSON mode and text mode models for better performance
+- Added `_create_chat_openai()` factory method with `response_format` compatibility handling
+- Implemented **lazy loading** to avoid LLM connection errors during module import
+- Added `_ensure_models_initialized()` guard method for deferred initialization
+
+**2. Pydantic Output Models**
+- `CategorizationResult` — Classification output with `category_uid`, `confidence`, `requirement_level`
+- `TemplateMatchResult` — Template matching output with `match_type`, `extracted_variables`
+- `TemplateVariable` — Variable definition with `name`, `type`, `label`, `unit`
+- `NewTemplateResult` — New template generation output
+- `TopologyAnalysisResult` — Trace chain analysis with `level_adjustments`, `trace_chains`
+- Each model includes a `get_format_instructions()` class method for generating JSON format prompts
+
+**3. Prompt Architecture**
+- System instruction + Human message separation using `ChatPromptTemplate.from_messages()`
+- **Custom format instructions** instead of `JsonOutputParser.get_format_instructions()` for better compatibility
+- Supports template variables with proper escaping
+
+**4. Fixed Issues**
+- **ImportError**: Replaced `from langchain.output_parsers import JsonOutputParser` with custom format instructions
+- **Double prompt wrapping**: Removed `ChatPromptTemplate` from individual modules, centralized in `llm_client.py`
+- **LLM connection on import**: Implemented lazy loading to defer model initialization
+- **response_format compatibility**: Added try/except in `_create_chat_openai()` to handle servers that don't support JSON mode
+- **AttributeError**: Pre-initialized `model_name` and `base_url` attributes in `__init__`
 
 ### Results
 
@@ -186,6 +237,7 @@ SemiReq-Hub（智能需求生命周期追溯系统）利用大语言模型自动
 | 层次 | 技术 |
 |------|------|
 | 语言 | Python 3.10+ |
+| LLM 框架 | **LangChain 0.2+** |
 | LLM | DeepSeek-R1 / Qwen（OpenAI 兼容接口） |
 | 数据处理 | OpenPyXL (Excel), JSON |
 | 并发 | ThreadPoolExecutor |
@@ -197,8 +249,8 @@ SemiReq-Hub（智能需求生命周期追溯系统）利用大语言模型自动
 # 1. 安装依赖
 pip install -r requirements.txt
 
-# 2. 配置 LLM（编辑 src/llm_client.py）
-#    设置 MODEL_CHOICE = "local" 或 "siliconflow"
+# 2. 配置 LLM
+#    通过环境变量设置 MODEL_CHOICE: "local", "siliconflow", 或 "auto"
 #    通过环境变量设置 API Key
 
 # 3. 测试连接
@@ -254,9 +306,5 @@ MIT License
 ## Author
 
 **Chen Mo (陈默)** — *Intern, System Engineering*
-- Project Period: 2026.04 - 2026.07
-#   I R L T  
- #   I R L T  
- #   I R L T  
- #   I R L T  
+- Project Period: 2026.04 - 2026.07#   I R L T  
  
