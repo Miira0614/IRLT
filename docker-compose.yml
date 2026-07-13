@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: irlt-api
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_CHOICE=${MODEL_CHOICE:-siliconflow}
+      - SILICONFLOW_API_KEY=${SILICONFLOW_API_KEY:-}
+    volumes:
+      - ./data:/app/data
+      - ./raw_data:/app/raw_data
+      - ./raw_out:/app/raw_out
+      - ./output:/app/output
+      - ./Audit_Records:/app/Audit_Records
+      - ./complete_data:/app/complete_data
+      - ./conplete_out:/app/conplete_out
+      - ./api/uploads:/app/api/uploads
+      - ./api/output:/app/api/output
+    restart: unless-stopped
+
+  frontend:
+    build: .
+    container_name: irlt-frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://api:8000
+    depends_on:
+      - api
+    command: ["streamlit", "run", "frontend/app.py", "--server.address=0.0.0.0", "--server.port=8501"]
+    volumes:
+      - ./frontend:/app/frontend
+      - ./.streamlit:/app/.streamlit
+    restart: unless-stopped

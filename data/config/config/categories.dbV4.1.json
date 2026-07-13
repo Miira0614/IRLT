@@ -1,0 +1,2258 @@
+{
+  "categories": {
+    "cat_7f07b6": {
+      "uid": "cat_7f07b6",
+      "id": "1",
+      "name": "核心功能（按照产品类型介绍）",
+      "level": 1,
+      "parent_uid": "",
+      "children": [
+        "cat_de332k",
+        "cat_de332f",
+        "cat_b3d7ea",
+        "cat_e74cdd",
+        "cat_74fd30",
+        "cat_7a3916",
+        "cat_df17e2",
+        "cat_c715af",
+        "cat_878dd6",
+        "cat_5f7d8e",
+        "cat_65c635",
+        "cat_c66872",
+        "cat_b73f21"
+      ],
+      "description": "根据具体产品定义硬核功能模块"
+    },
+    "cat_de332k": {
+      "uid": "cat_de332k",
+      "id": "1.1",
+      "name": "CPU",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_de343t"
+      ],
+      "description": ""
+    },
+    "cat_de343t": {
+      "uid": "cat_de343t",
+      "id": "1.1.1",
+      "name": "CPU规范定义",
+      "level": 3,
+      "parent_uid": "cat_de332k",
+      "children": [],
+      "description": ""
+    },
+    "cat_de332f": {
+      "uid": "cat_de332f",
+      "id": "1.2",
+      "name": "通用硬件外设功能",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_8873a3",
+        "cat_147443",
+        "cat_a32c04",
+        "cat_580aa6",
+        "cat_580aa7"
+      ],
+      "description": ""
+    },
+    "cat_8873a3": {
+      "uid": "cat_8873a3",
+      "id": "1.2.1",
+      "name": "LED驱动控制规格",
+      "level": 3,
+      "parent_uid": "cat_de332f",
+      "children": [],
+      "description": "仅限：LED驱动电路设计、LED亮度/颜色控制、LED恒流/恒压驱动、LED闪烁/呼吸灯控制、LED串并联驱动架构。",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_147443": {
+      "uid": "cat_147443",
+      "id": "1.2.2",
+      "name": "GPIO配置与引脚复用",
+      "level": 3,
+      "parent_uid": "cat_de332f",
+      "children": [],
+      "description": "",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_a32c04": {
+      "uid": "cat_a32c04",
+      "id": "1.2.3",
+      "name": "核心处理单元与多级存储架构",
+      "level": 3,
+      "parent_uid": "cat_de332f",
+      "children": [],
+      "description": "包容内核、Flash代码保护、SRAM等核心硬件",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_580aa6": {
+      "uid": "cat_580aa6",
+      "id": "1.2.4",
+      "name": "定时器与脉宽调制规格",
+      "level": 3,
+      "parent_uid": "cat_de332f",
+      "children": [],
+      "description": "",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_580aa7": {
+      "uid": "cat_580aa7",
+      "id": "1.2.5",
+      "name": "其他硬件外设",
+      "level": 3,
+      "parent_uid": "cat_de332f",
+      "children": [],
+      "description": "",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_b3d7ea": {
+      "uid": "cat_b3d7ea",
+      "id": "1.3",
+      "name": "电池监控与电芯管理硬核包",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_fb459a",
+        "cat_fdb15f",
+        "cat_a26027"
+      ],
+      "description": "电池管理专属硬核模块包"
+    },
+    "cat_fb459a": {
+      "uid": "cat_fb459a",
+      "id": "1.3.1",
+      "name": "充放电控制拓扑与驱动",
+      "level": 3,
+      "parent_uid": "cat_b3d7ea",
+      "children": [],
+      "description": "强调：充电路径切换、外置MOS驱动控制等纯功能性拓扑逻辑，不含安全保护指标",
+      "applicable_lines": [
+        "BMS"
+      ]
+    },
+    "cat_fdb15f": {
+      "uid": "cat_fdb15f",
+      "id": "1.3.2",
+      "name": "充电器状态监控与异常检测",
+      "level": 3,
+      "parent_uid": "cat_b3d7ea",
+      "children": [],
+      "description": "",
+      "applicable_lines": [
+        "BMS"
+      ]
+    },
+    "cat_a26027": {
+      "uid": "cat_a26027",
+      "id": "1.3.3",
+      "name": "电池均衡与拓扑通道复用",
+      "level": 3,
+      "parent_uid": "cat_b3d7ea",
+      "children": [],
+      "description": "",
+      "applicable_lines": [
+        "BMS"
+      ]
+    },
+    "cat_e74cdd": {
+      "uid": "cat_e74cdd",
+      "id": "1.4",
+      "name": "接口物理层与功率传输控制域",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_fca30e",
+        "cat_e64e01",
+        "cat_6c2bbd"
+      ],
+      "description": "接口传输与高速信号防护域"
+    },
+    "cat_fca30e": {
+      "uid": "cat_fca30e",
+      "id": "1.4.1",
+      "name": "接口状态检测与角色切换逻辑",
+      "level": 3,
+      "parent_uid": "cat_e74cdd",
+      "children": [],
+      "description": "含CC引脚状态机、死电池DB模式等",
+      "applicable_lines": [
+        "PD",
+        "HUB",
+        "EC"
+      ]
+    },
+    "cat_e64e01": {
+      "uid": "cat_e64e01",
+      "id": "1.4.2",
+      "name": "电源路径安全与快速泄放控制",
+      "level": 3,
+      "parent_uid": "cat_e74cdd",
+      "children": [],
+      "description": "含VBUS路径控制、放电Discharge电路等",
+      "applicable_lines": [
+        "PD",
+        "HUB",
+        "EC"
+      ]
+    },
+    "cat_6c2bbd": {
+      "uid": "cat_6c2bbd",
+      "id": "1.4.3",
+      "name": "信号线物理层防护",
+      "level": 3,
+      "parent_uid": "cat_e74cdd",
+      "children": [],
+      "description": "",
+      "applicable_lines": [
+        "PD",
+        "HUB",
+        "MCU"
+      ]
+    },
+    "cat_74fd30": {
+      "uid": "cat_74fd30",
+      "id": "1.5",
+      "name": "高级系统监控与硬件安全响应域",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_81b07a",
+        "cat_729a4b"
+      ],
+      "description": "高可靠性及带外主控安全域"
+    },
+    "cat_81b07a": {
+      "uid": "cat_81b07a",
+      "id": "1.5.1",
+      "name": "智能电源行为序列与时序控制",
+      "level": 3,
+      "parent_uid": "cat_74fd30",
+      "children": [],
+      "description": "含Power Sequencing时序硬件配合",
+      "applicable_lines": [
+        "EC",
+        "MCU"
+      ]
+    },
+    "cat_729a4b": {
+      "uid": "cat_729a4b",
+      "id": "1.5.2",
+      "name": "硬件安全防线与低功耗锁存响应",
+      "level": 3,
+      "parent_uid": "cat_74fd30",
+      "children": [],
+      "description": "含机箱入侵检测、硬件Case Open、紧急关断",
+      "applicable_lines": [
+        "EC",
+        "IBS",
+        "BMS"
+      ]
+    },
+    "cat_7a3916": {
+      "uid": "cat_7a3916",
+      "id": "1.6",
+      "name": "高精度模拟前端与信号调理域",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_a4b164",
+        "cat_68fc1d",
+        "cat_b96fef"
+      ],
+      "description": "高精度信号链与AFE模拟核心域"
+    },
+    "cat_a4b164": {
+      "uid": "cat_a4b164",
+      "id": "1.6.1",
+      "name": "多通道同步信号采集与时序架构",
+      "level": 3,
+      "parent_uid": "cat_7a3916",
+      "children": [],
+      "description": "含同步采样、多路轮询一致性",
+      "applicable_lines": [
+        "信号链",
+        "BMS",
+        "MCU"
+      ]
+    },
+    "cat_68fc1d": {
+      "uid": "cat_68fc1d",
+      "id": "1.6.2",
+      "name": "模拟供电系统与高精度电压基准",
+      "level": 3,
+      "parent_uid": "cat_7a3916",
+      "children": [],
+      "description": "仅限：Bandgap、内部LDO、POR等模拟供电模块的功能定义与硬件行为",
+      "applicable_lines": [
+        "信号链",
+        "BMS",
+        "MCU"
+      ]
+    },
+    "cat_b96fef": {
+      "uid": "cat_b96fef",
+      "id": "1.6.3",
+      "name": "传感器集成驱动与硬件同步机制",
+      "level": 3,
+      "parent_uid": "cat_7a3916",
+      "children": [],
+      "description": "",
+      "applicable_lines": [
+        "信号链"
+      ]
+    },
+    "cat_df17e2": {
+      "uid": "cat_df17e2",
+      "id": "1.7",
+      "name": "I2C通信总线底层驱动与平台级总线软件规格",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_0f6087",
+        "cat_392bb7"
+      ],
+      "description": "公共平台级基础总线驱动"
+    },
+    "cat_0f6087": {
+      "uid": "cat_0f6087",
+      "id": "1.7.1",
+      "name": "通信速率与模式支持",
+      "level": 3,
+      "parent_uid": "cat_df17e2",
+      "children": [],
+      "description": "含标准/快速/高速模式软件配置、软件模拟I2C支持",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_392bb7": {
+      "uid": "cat_392bb7",
+      "id": "1.7.2",
+      "name": "物理地址与多从机配置",
+      "level": 3,
+      "parent_uid": "cat_df17e2",
+      "children": [],
+      "description": "含7位/10位寻址软件响应、多从机软件轮询与仲裁机制",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_c715af": {
+      "uid": "cat_c715af",
+      "id": "1.8",
+      "name": "高精度计量与现场总线控制层",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_694824",
+        "cat_41b504",
+        "cat_508e67"
+      ],
+      "description": "BMS与车载计量专属软件算法包"
+    },
+    "cat_694824": {
+      "uid": "cat_694824",
+      "id": "1.8.1",
+      "name": "信号采样优化与转换校准算法",
+      "level": 3,
+      "parent_uid": "cat_c715af",
+      "children": [],
+      "description": "含库仑计滤波、ADC偏置Offset校准、OSR调整固件",
+      "applicable_lines": [
+        "BMS",
+        "信号链"
+      ]
+    },
+    "cat_41b504": {
+      "uid": "cat_41b504",
+      "id": "1.8.2",
+      "name": "串行及现场总线底层通信驱动",
+      "level": 3,
+      "parent_uid": "cat_c715af",
+      "children": [],
+      "description": "含LIN通信、SPI带CRC校验、数据帧检查驱动",
+      "applicable_lines": [
+        "BMS",
+        "MCU"
+      ]
+    },
+    "cat_508e67": {
+      "uid": "cat_508e67",
+      "id": "1.8.3",
+      "name": "底层数学模型与核心业务算法",
+      "level": 3,
+      "parent_uid": "cat_c715af",
+      "children": [],
+      "description": "含电芯SOC/SOH估算核心内核、电池状态机运行调度算法",
+      "applicable_lines": [
+        "BMS"
+      ]
+    },
+    "cat_878dd6": {
+      "uid": "cat_878dd6",
+      "id": "1.9",
+      "name": "专用通信协议栈与策略管理驱动层",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_77e345",
+        "cat_21c5a9"
+      ],
+      "description": "接口握手及高层协议栈软件大类"
+    },
+    "cat_77e345": {
+      "uid": "cat_77e345",
+      "id": "1.9.1",
+      "name": "链路层协议与通用策略管理固件",
+      "level": 3,
+      "parent_uid": "cat_878dd6",
+      "children": [],
+      "description": "含PD协议层、策略管理器、TCPCI适配、多级级联",
+      "applicable_lines": [
+        "PD",
+        "EC"
+      ]
+    },
+    "cat_21c5a9": {
+      "uid": "cat_21c5a9",
+      "id": "1.9.2",
+      "name": "外部标准协议兼容与握手识别算法",
+      "level": 3,
+      "parent_uid": "cat_878dd6",
+      "children": [],
+      "description": "含BC1.2识别、UFCS及各类私有快充软件握手",
+      "applicable_lines": [
+        "PD"
+      ]
+    },
+    "cat_5f7d8e": {
+      "uid": "cat_5f7d8e",
+      "id": "1.10",
+      "name": "信号处理算法与数据级联驱动层",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_af270c",
+        "cat_a57342"
+      ],
+      "description": "信号处理与多节点协同算法"
+    },
+    "cat_af270c": {
+      "uid": "cat_af270c",
+      "id": "1.10.1",
+      "name": "多通道数据同步控制与调度驱动",
+      "level": 3,
+      "parent_uid": "cat_5f7d8e",
+      "children": [],
+      "description": "含多路LED同时打开逻辑、RX有效相位驱动",
+      "applicable_lines": [
+        "信号链",
+        "MCU"
+      ]
+    },
+    "cat_a57342": {
+      "uid": "cat_a57342",
+      "id": "1.10.2",
+      "name": "数据滤波校准与多节点上传算法",
+      "level": 3,
+      "parent_uid": "cat_5f7d8e",
+      "children": [],
+      "description": "含信号前端SNR调优、噪声抑制、温度周期上传",
+      "applicable_lines": [
+        "信号链",
+        "BMS",
+        "MCU"
+      ]
+    },
+    "cat_65c635": {
+      "uid": "cat_65c635",
+      "id": "1.11",
+      "name": "系统底层驱动与安全升级固件层",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_e40567",
+        "cat_97dbd2",
+        "cat_1770db"
+      ],
+      "description": "系统及芯片生命周期安全底座"
+    },
+    "cat_e40567": {
+      "uid": "cat_e40567",
+      "id": "1.11.1",
+      "name": "直接内存访问与通用数据搬运驱动",
+      "level": 3,
+      "parent_uid": "cat_65c635",
+      "children": [],
+      "description": "含DMA通道分配、看门狗WDT复位支持",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_97dbd2": {
+      "uid": "cat_97dbd2",
+      "id": "1.11.2",
+      "name": "芯片标识读取接口与产线调试锁断固件",
+      "level": 3,
+      "parent_uid": "cat_65c635",
+      "children": [],
+      "description": "定义供外调用的UID访问API，及量产熔断锁死JTAG固件",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_1770db": {
+      "uid": "cat_1770db",
+      "id": "1.11.3",
+      "name": "引导程序与固件升级规格",
+      "level": 3,
+      "parent_uid": "cat_65c635",
+      "children": [],
+      "description": "含双分区安全Bootloader架构、OTA安全升级固件、在线刷写映像格式及固件版本校验机制",
+      "applicable_lines": [
+        "EC",
+        "PD",
+        "BMS",
+        "HUB",
+        "MCU"
+      ]
+    },
+    "cat_c66872": {
+      "uid": "cat_c66872",
+      "id": "1.12",
+      "name": "调试工具链与物理环境支持层",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_e2f3b0",
+        "cat_ae288d"
+      ],
+      "description": "面向公共开发者生态工具栈"
+    },
+    "cat_e2f3b0": {
+      "uid": "cat_e2f3b0",
+      "id": "1.12.1",
+      "name": "编译环境与基础工具链支持",
+      "level": 3,
+      "parent_uid": "cat_c66872",
+      "children": [],
+      "description": "含面向KEIL/IAR等集成开发环境的工程模板、链接脚本配置、编译器版本依赖规范",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_ae288d": {
+      "uid": "cat_ae288d",
+      "id": "1.12.2",
+      "name": "调试仿真与寄存器交互工具栈",
+      "level": 3,
+      "parent_uid": "cat_c66872",
+      "children": [],
+      "description": "含J-Link/DAP-Link仿真配置、上位机通信调试工具、寄存器读写脚本及日志跟踪Log系统",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_b73f21": {
+      "uid": "cat_b73f21",
+      "id": "1.13",
+      "name": "软硬件开发支持与交付清单规范",
+      "level": 2,
+      "parent_uid": "cat_7f07b6",
+      "children": [
+        "cat_8034f9",
+        "cat_7ca63a"
+      ],
+      "description": "出厂结项标准化交付资产"
+    },
+    "cat_8034f9": {
+      "uid": "cat_8034f9",
+      "id": "1.13.1",
+      "name": "软件开发包交付物规格",
+      "level": 3,
+      "parent_uid": "cat_b73f21",
+      "children": [],
+      "description": "SDK",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_7ca63a": {
+      "uid": "cat_7ca63a",
+      "id": "1.13.2",
+      "name": "硬件交付物与测试配套清单",
+      "level": 3,
+      "parent_uid": "cat_b73f21",
+      "children": [],
+      "description": "含评估板EVB参考原理图/PCB说明、测试引脚映射表、基础校准参数固件区出厂镜像定义",
+      "applicable_lines": [
+        "ALL"
+      ]
+    },
+    "cat_94419c": {
+      "uid": "cat_94419c",
+      "id": "2",
+      "name": "功能指标",
+      "level": 1,
+      "parent_uid": "",
+      "children": [
+        "cat_41dcba",
+        "cat_5a8265",
+        "cat_682330"
+      ],
+      "description": "定义：具体硬件电路的实现方案、模块构成与架构级约束"
+    },
+    "cat_41dcba": {
+      "uid": "cat_41dcba",
+      "id": "2.1",
+      "name": "模拟前端设计",
+      "level": 2,
+      "parent_uid": "cat_94419c",
+      "children": [
+        "cat_767eb5",
+        "cat_0fbf34",
+        "cat_ec2ec2",
+        "cat_644c4d",
+        "cat_90b30a",
+        "cat_e98778"
+      ],
+      "description": "强调：微弱信号调理、放大、滤波及输入隔离保护实现"
+    },
+    "cat_767eb5": {
+      "uid": "cat_767eb5",
+      "id": "2.1.1",
+      "name": "信号调理",
+      "level": 3,
+      "parent_uid": "cat_41dcba",
+      "children": [],
+      "description": ""
+    },
+    "cat_0fbf34": {
+      "uid": "cat_0fbf34",
+      "id": "2.1.2",
+      "name": "放大电路",
+      "level": 3,
+      "parent_uid": "cat_41dcba",
+      "children": [],
+      "description": "本小节仅定义模拟前端（AFE）纯硬件放大器电路的技术实现方案。"
+    },
+    "cat_ec2ec2": {
+      "uid": "cat_ec2ec2",
+      "id": "2.1.3",
+      "name": "滤波电路",
+      "level": 3,
+      "parent_uid": "cat_41dcba",
+      "children": [],
+      "description": ""
+    },
+    "cat_644c4d": {
+      "uid": "cat_644c4d",
+      "id": "2.1.4",
+      "name": "基准电路",
+      "level": 3,
+      "parent_uid": "cat_41dcba",
+      "children": [],
+      "description": ""
+    },
+    "cat_90b30a": {
+      "uid": "cat_90b30a",
+      "id": "2.1.5",
+      "name": "输入保护电路",
+      "level": 3,
+      "parent_uid": "cat_41dcba",
+      "children": [],
+      "description": ""
+    },
+    "cat_e98778": {
+      "uid": "cat_e98778",
+      "id": "2.1.6",
+      "name": "架构约束",
+      "level": 3,
+      "parent_uid": "cat_41dcba",
+      "children": [],
+      "description": " 如 PSRR/CMRR 隔离目标"
+    },
+    "cat_5a8265": {
+      "uid": "cat_5a8265",
+      "id": "2.2",
+      "name": "数据转换设计",
+      "level": 2,
+      "parent_uid": "cat_94419c",
+      "children": [
+        "cat_6ab043",
+        "cat_bbd631",
+        "cat_d836ed",
+        "cat_d3ea2d",
+        "cat_ee0636"
+      ],
+      "description": "强调：ADC/DAC 核心架构选型、数字滤波与缓冲逻辑"
+    },
+    "cat_6ab043": {
+      "uid": "cat_6ab043",
+      "id": "2.2.1",
+      "name": "模数转换器(ADC)",
+      "level": 3,
+      "parent_uid": "cat_5a8265",
+      "children": [],
+      "description": ""
+    },
+    "cat_bbd631": {
+      "uid": "cat_bbd631",
+      "id": "2.2.2",
+      "name": "数模转换器(DAC)",
+      "level": 3,
+      "parent_uid": "cat_5a8265",
+      "children": [],
+      "description": ""
+    },
+    "cat_d836ed": {
+      "uid": "cat_d836ed",
+      "id": "2.2.3",
+      "name": "采样电路设计",
+      "level": 3,
+      "parent_uid": "cat_5a8265",
+      "children": [],
+      "description": ""
+    },
+    "cat_d3ea2d": {
+      "uid": "cat_d3ea2d",
+      "id": "2.2.4",
+      "name": "数字滤波设计",
+      "level": 3,
+      "parent_uid": "cat_5a8265",
+      "children": [],
+      "description": ""
+    },
+    "cat_ee0636": {
+      "uid": "cat_ee0636",
+      "id": "2.2.5",
+      "name": "数据缓存设计",
+      "level": 3,
+      "parent_uid": "cat_5a8265",
+      "children": [],
+      "description": ""
+    },
+    "cat_682330": {
+      "uid": "cat_682330",
+      "id": "2.3",
+      "name": "电源管理设置",
+      "level": 2,
+      "parent_uid": "cat_94419c",
+      "children": [
+        "cat_01d6cb",
+        "cat_2839d6",
+        "cat_7c8dee",
+        "cat_afc0b7",
+        "cat_960b27",
+        "cat_a6c610",
+        "cat_7d27e5"
+      ],
+      "description": "强调：片上稳压、电源网格分配、LDO/DCDC架构与唤醒控制逻辑"
+    },
+    "cat_01d6cb": {
+      "uid": "cat_01d6cb",
+      "id": "2.3.1",
+      "name": "稳压电路设计",
+      "level": 3,
+      "parent_uid": "cat_682330",
+      "children": [],
+      "description": ""
+    },
+    "cat_2839d6": {
+      "uid": "cat_2839d6",
+      "id": "2.3.2",
+      "name": "电源分配设计",
+      "level": 3,
+      "parent_uid": "cat_682330",
+      "children": [],
+      "description": " (PDN)"
+    },
+    "cat_7c8dee": {
+      "uid": "cat_7c8dee",
+      "id": "2.3.3",
+      "name": "上电时序设计 (Power Sequencing)",
+      "level": 3,
+      "parent_uid": "cat_682330",
+      "children": [],
+      "description": ""
+    },
+    "cat_afc0b7": {
+      "uid": "cat_afc0b7",
+      "id": "2.3.4",
+      "name": "电源保护设计",
+      "level": 3,
+      "parent_uid": "cat_682330",
+      "children": [],
+      "description": ""
+    },
+    "cat_960b27": {
+      "uid": "cat_960b27",
+      "id": "2.3.5",
+      "name": "电源滤波设计",
+      "level": 3,
+      "parent_uid": "cat_682330",
+      "children": [],
+      "description": ""
+    },
+    "cat_a6c610": {
+      "uid": "cat_a6c610",
+      "id": "2.3.6",
+      "name": "休眠唤醒机制",
+      "level": 3,
+      "parent_uid": "cat_682330",
+      "children": [],
+      "description": ""
+    },
+    "cat_7d27e5": {
+      "uid": "cat_7d27e5",
+      "id": "2.3.7",
+      "name": "复位控制与寄存器隔离机制",
+      "level": 3,
+      "parent_uid": "cat_682330",
+      "children": [],
+      "description": ""
+    },
+    "cat_9109c3": {
+      "uid": "cat_9109c3",
+      "id": "3",
+      "name": "性能指标",
+      "level": 1,
+      "parent_uid": "",
+      "children": [
+        "cat_6a8b6d",
+        "cat_f305e9",
+        "cat_cd4197",
+        "cat_2deb74",
+        "cat_ede67b",
+        "cat_b0ee5a",
+        "cat_0a816b"
+      ],
+      "description": "定义：芯片硬性技术指标与可量化的物理约束（PPA+）"
+    },
+    "cat_6a8b6d": {
+      "uid": "cat_6a8b6d",
+      "id": "3.1",
+      "name": "电气特性",
+      "level": 2,
+      "parent_uid": "cat_9109c3",
+      "children": [
+        "cat_6ca2f4",
+        "cat_c9926c",
+        "cat_bf42a5",
+        "cat_16da03",
+        "cat_fe0664",
+        "cat_d0cebc"
+      ],
+      "description": "强调：电压、电流、阻抗等稳态与频域电气边界"
+    },
+    "cat_6ca2f4": {
+      "uid": "cat_6ca2f4",
+      "id": "3.1.1",
+      "name": "工作电压范围",
+      "level": 3,
+      "parent_uid": "cat_6a8b6d",
+      "children": [],
+      "description": ""
+    },
+    "cat_c9926c": {
+      "uid": "cat_c9926c",
+      "id": "3.1.2",
+      "name": "基础耐压等级",
+      "level": 3,
+      "parent_uid": "cat_6a8b6d",
+      "children": [],
+      "description": ""
+    },
+    "cat_bf42a5": {
+      "uid": "cat_bf42a5",
+      "id": "3.1.3",
+      "name": "电流能力",
+      "level": 3,
+      "parent_uid": "cat_6a8b6d",
+      "children": [],
+      "description": ""
+    },
+    "cat_16da03": {
+      "uid": "cat_16da03",
+      "id": "3.1.4",
+      "name": "输入/输出阻抗",
+      "level": 3,
+      "parent_uid": "cat_6a8b6d",
+      "children": [],
+      "description": ""
+    },
+    "cat_fe0664": {
+      "uid": "cat_fe0664",
+      "id": "3.1.5",
+      "name": "带宽特性",
+      "level": 3,
+      "parent_uid": "cat_6a8b6d",
+      "children": [],
+      "description": ""
+    },
+    "cat_d0cebc": {
+      "uid": "cat_d0cebc",
+      "id": "3.1.6",
+      "name": "动态范围",
+      "level": 3,
+      "parent_uid": "cat_6a8b6d",
+      "children": [],
+      "description": ""
+    },
+    "cat_f305e9": {
+      "uid": "cat_f305e9",
+      "id": "3.2",
+      "name": "功耗模式",
+      "level": 2,
+      "parent_uid": "cat_9109c3",
+      "children": [
+        "cat_e2bc87",
+        "cat_a81a7c",
+        "cat_9789a0",
+        "cat_00a233",
+        "cat_d77dc4"
+      ],
+      "description": "强调：静态/动态功耗指标与模式切换的动态时序限制"
+    },
+    "cat_e2bc87": {
+      "uid": "cat_e2bc87",
+      "id": "3.2.1",
+      "name": "工作功耗",
+      "level": 3,
+      "parent_uid": "cat_f305e9",
+      "children": [],
+      "description": "强调：全速运行与业务执行状态下的动态电流及外设开启约束"
+    },
+    "cat_a81a7c": {
+      "uid": "cat_a81a7c",
+      "id": "3.2.2",
+      "name": "待机功耗",
+      "level": 3,
+      "parent_uid": "cat_f305e9",
+      "children": [],
+      "description": "强调：空闲状态下的静态功耗及中断无延迟响应能力"
+    },
+    "cat_9789a0": {
+      "uid": "cat_9789a0",
+      "id": "3.2.3",
+      "name": "休眠功耗",
+      "level": 3,
+      "parent_uid": "cat_f305e9",
+      "children": [],
+      "description": "强调：低功耗/深睡模式下的电流指标与特定模块（如RTC）唤醒限制"
+    },
+    "cat_00a233": {
+      "uid": "cat_00a233",
+      "id": "3.2.4",
+      "name": "关断功耗",
+      "level": 3,
+      "parent_uid": "cat_f305e9",
+      "children": [],
+      "description": "强调：完全关闭或漏电保护状态下的极限微安/纳安级最低功耗"
+    },
+    "cat_d77dc4": {
+      "uid": "cat_d77dc4",
+      "id": "3.2.5",
+      "name": "功耗切换时序与唤醒",
+      "level": 3,
+      "parent_uid": "cat_f305e9",
+      "children": [],
+      "description": ""
+    },
+    "cat_cd4197": {
+      "uid": "cat_cd4197",
+      "id": "3.3",
+      "name": "响应特性",
+      "level": 2,
+      "parent_uid": "cat_9109c3",
+      "children": [
+        "cat_ea2102",
+        "cat_ba9780",
+        "cat_3aec25",
+        "cat_5cad94",
+        "cat_aede0a"
+      ],
+      "description": "强调：信号捕获、处理与更新的实时性与延迟要求"
+    },
+    "cat_ea2102": {
+      "uid": "cat_ea2102",
+      "id": "3.3.1",
+      "name": "采样率",
+      "level": 3,
+      "parent_uid": "cat_cd4197",
+      "children": [],
+      "description": ""
+    },
+    "cat_ba9780": {
+      "uid": "cat_ba9780",
+      "id": "3.3.2",
+      "name": "响应时间",
+      "level": 3,
+      "parent_uid": "cat_cd4197",
+      "children": [],
+      "description": ""
+    },
+    "cat_3aec25": {
+      "uid": "cat_3aec25",
+      "id": "3.3.3",
+      "name": "建立时间",
+      "level": 3,
+      "parent_uid": "cat_cd4197",
+      "children": [],
+      "description": ""
+    },
+    "cat_5cad94": {
+      "uid": "cat_5cad94",
+      "id": "3.3.4",
+      "name": "传播迟延",
+      "level": 3,
+      "parent_uid": "cat_cd4197",
+      "children": [],
+      "description": ""
+    },
+    "cat_aede0a": {
+      "uid": "cat_aede0a",
+      "id": "3.3.5",
+      "name": "更新周期",
+      "level": 3,
+      "parent_uid": "cat_cd4197",
+      "children": [],
+      "description": ""
+    },
+    "cat_2deb74": {
+      "uid": "cat_2deb74",
+      "id": "3.4",
+      "name": "时序特性",
+      "level": 2,
+      "parent_uid": "cat_9109c3",
+      "children": [
+        "cat_e53c49",
+        "cat_9eb6d4",
+        "cat_13ae12",
+        "cat_17d065"
+      ],
+      "description": "强调：时钟源硬指标、建立/保持时间约束与多路同步机制"
+    },
+    "cat_e53c49": {
+      "uid": "cat_e53c49",
+      "id": "3.4.1",
+      "name": "时钟频率",
+      "level": 3,
+      "parent_uid": "cat_2deb74",
+      "children": [],
+      "description": ""
+    },
+    "cat_9eb6d4": {
+      "uid": "cat_9eb6d4",
+      "id": "3.4.2",
+      "name": "时序参数与约束",
+      "level": 3,
+      "parent_uid": "cat_2deb74",
+      "children": [],
+      "description": "强调：芯片总线、数字接口的建立/保持时间、上升/下降沿等硬件级时序约束"
+    },
+    "cat_13ae12": {
+      "uid": "cat_13ae12",
+      "id": "3.4.3",
+      "name": "多信号同步机制",
+      "level": 3,
+      "parent_uid": "cat_2deb74",
+      "children": [],
+      "description": ""
+    },
+    "cat_17d065": {
+      "uid": "cat_17d065",
+      "id": "3.4.4",
+      "name": "时序稳定性",
+      "level": 3,
+      "parent_uid": "cat_2deb74",
+      "children": [],
+      "description": ""
+    },
+    "cat_ede67b": {
+      "uid": "cat_ede67b",
+      "id": "3.5",
+      "name": "精度与稳定性",
+      "level": 2,
+      "parent_uid": "cat_9109c3",
+      "children": [
+        "cat_8f91aa",
+        "cat_fd3580",
+        "cat_755152",
+        "cat_b3bead",
+        "cat_b875c7"
+      ],
+      "description": "强调：针对模拟/信号链的核心精度计量指标"
+    },
+    "cat_8f91aa": {
+      "uid": "cat_8f91aa",
+      "id": "3.5.1",
+      "name": "测量精度",
+      "level": 3,
+      "parent_uid": "cat_ede67b",
+      "children": [],
+      "description": ""
+    },
+    "cat_fd3580": {
+      "uid": "cat_fd3580",
+      "id": "3.5.2",
+      "name": "线性度",
+      "level": 3,
+      "parent_uid": "cat_ede67b",
+      "children": [],
+      "description": ""
+    },
+    "cat_755152": {
+      "uid": "cat_755152",
+      "id": "3.5.3",
+      "name": "分辨率",
+      "level": 3,
+      "parent_uid": "cat_ede67b",
+      "children": [],
+      "description": ""
+    },
+    "cat_b3bead": {
+      "uid": "cat_b3bead",
+      "id": "3.5.4",
+      "name": "重复性",
+      "level": 3,
+      "parent_uid": "cat_ede67b",
+      "children": [],
+      "description": ""
+    },
+    "cat_b875c7": {
+      "uid": "cat_b875c7",
+      "id": "3.5.5",
+      "name": "校准与漂移控制",
+      "level": 3,
+      "parent_uid": "cat_ede67b",
+      "children": [],
+      "description": "注：此处仅定义运行时的温漂、时漂硬性指标要求"
+    },
+    "cat_b0ee5a": {
+      "uid": "cat_b0ee5a",
+      "id": "3.6",
+      "name": "容量规格",
+      "level": 2,
+      "parent_uid": "cat_9109c3",
+      "children": [
+        "cat_dcd162",
+        "cat_a189cb",
+        "cat_6ba9aa",
+        "cat_366dbd",
+        "cat_4664f0"
+      ],
+      "description": "强调：硬件资源分配、通道规模与可扩展边界"
+    },
+    "cat_dcd162": {
+      "uid": "cat_dcd162",
+      "id": "3.6.1",
+      "name": "通道配置",
+      "level": 3,
+      "parent_uid": "cat_b0ee5a",
+      "children": [],
+      "description": ""
+    },
+    "cat_a189cb": {
+      "uid": "cat_a189cb",
+      "id": "3.6.2",
+      "name": "量程范围",
+      "level": 3,
+      "parent_uid": "cat_b0ee5a",
+      "children": [],
+      "description": ""
+    },
+    "cat_6ba9aa": {
+      "uid": "cat_6ba9aa",
+      "id": "3.6.3",
+      "name": "扩展能力",
+      "level": 3,
+      "parent_uid": "cat_b0ee5a",
+      "children": [],
+      "description": ""
+    },
+    "cat_366dbd": {
+      "uid": "cat_366dbd",
+      "id": "3.6.4",
+      "name": "资源规模",
+      "level": 3,
+      "parent_uid": "cat_b0ee5a",
+      "children": [],
+      "description": ""
+    },
+    "cat_4664f0": {
+      "uid": "cat_4664f0",
+      "id": "3.6.5",
+      "name": "多路复用",
+      "level": 3,
+      "parent_uid": "cat_b0ee5a",
+      "children": [],
+      "description": ""
+    },
+    "cat_0a816b": {
+      "uid": "cat_0a816b",
+      "id": "3.7",
+      "name": "噪声与完整性特性",
+      "level": 2,
+      "parent_uid": "cat_9109c3",
+      "children": [
+        "cat_c78a4b",
+        "cat_d8d935",
+        "cat_857c1a"
+      ],
+      "description": "强调：模拟信号质量、抖动与板级信号/电源完整性目标"
+    },
+    "cat_c78a4b": {
+      "uid": "cat_c78a4b",
+      "id": "3.7.1",
+      "name": "噪声系数/噪底 (Noise Floor)",
+      "level": 3,
+      "parent_uid": "cat_0a816b",
+      "children": [],
+      "description": ""
+    },
+    "cat_d8d935": {
+      "uid": "cat_d8d935",
+      "id": "3.7.2",
+      "name": "相位噪声/抖动 (Jitter)",
+      "level": 3,
+      "parent_uid": "cat_0a816b",
+      "children": [],
+      "description": ""
+    },
+    "cat_857c1a": {
+      "uid": "cat_857c1a",
+      "id": "3.7.3",
+      "name": "信号完整性 (SI) 与电源完整性 (PI) 宏观要求",
+      "level": 3,
+      "parent_uid": "cat_0a816b",
+      "children": [],
+      "description": ""
+    },
+    "cat_wduhq1": {
+      "uid": "cat_wduhq1",
+      "id": "4",
+      "name": "芯片可测试性（DFT，设计面向设计）",
+      "level": 1,
+      "parent_uid": "",
+      "children": [
+        "cat_33fd24",
+        "cat_91ewfa",
+        "cat_c7d12s",
+        "cat_2ew57t",
+        "cat_aeqwd3",
+        "cat_6857t",
+        "cat_fes3t"
+      ],
+      "description": "定义：芯片在设计阶段考虑的测试机制，包括功能测试、性能测试、故障注入等。"
+    },
+    "cat_33fd24": {
+      "uid": "cat_33fd24",
+      "id": "4.1",
+      "name": "业务设计目标",
+      "level": 2,
+      "parent_uid": "cat_wduhq1",
+      "children": [
+        "cat_33f4"
+      ],
+      "description": ""
+    },
+    "cat_33f4": {
+      "uid": "cat_33f4",
+      "id": "4.1.1",
+      "name": "业务设计目标",
+      "level": 3,
+      "parent_uid": "cat_33fd24",
+      "children": [],
+      "description": ""
+    },
+    "cat_91ewfa": {
+      "uid": "cat_91ewfa",
+      "id": "4.2",
+      "name": "整体DFT架构方案",
+      "level": 2,
+      "parent_uid": "cat_wduhq1",
+      "children": [
+        "cat_91ew"
+      ],
+      "description": ""
+    },
+    "cat_91ew": {
+      "uid": "cat_91ew",
+      "id": "4.2.1",
+      "name": "整体DFT架构方案",
+      "level": 3,
+      "parent_uid": "cat_91ewfa",
+      "children": [],
+      "description": ""
+    },
+    "cat_c7d12s": {
+      "uid": "cat_c7d12s",
+      "id": "4.3",
+      "name": "边界扫描调试接口设计",
+      "level": 2,
+      "parent_uid": "cat_wduhq1",
+      "children": [
+        "cat_c7d1",
+        "cat_f6857t"
+      ],
+      "description": ""
+    },
+    "cat_c7d1": {
+      "uid": "cat_c7d1",
+      "id": "4.3.1",
+      "name": "边界扫描调试接口设计",
+      "level": 3,
+      "parent_uid": "cat_c7d12s",
+      "children": [],
+      "description": ""
+    },
+    "cat_f6857t": {
+      "uid": "cat_f6857t",
+      "id": "4.4",
+      "name": "Scan扫描链测试设计",
+      "level": 3,
+      "parent_uid": "cat_c7d12s",
+      "children": [],
+      "description": ""
+    },
+    "cat_2ew57t": {
+      "uid": "cat_2ew57t",
+      "id": "4.5",
+      "name": "BIST内置自测电路设计",
+      "level": 2,
+      "parent_uid": "cat_wduhq1",
+      "children": [
+        "cat_2ew57"
+      ],
+      "description": ""
+    },
+    "cat_2ew57": {
+      "uid": "cat_2ew57",
+      "id": "4.5.1",
+      "name": "BIST内置自测电路设计",
+      "level": 3,
+      "parent_uid": "cat_2ew57t",
+      "children": [],
+      "description": ""
+    },
+    "cat_aeqwd3": {
+      "uid": "cat_aeqwd3",
+      "id": "4.6",
+      "name": "OTP/EFUSE量产TRIM存储设计",
+      "level": 2,
+      "parent_uid": "cat_wduhq1",
+      "children": [
+        "cat_aeqwd"
+      ],
+      "description": ""
+    },
+    "cat_aeqwd": {
+      "uid": "cat_aeqwd",
+      "id": "4.6.1",
+      "name": "OTP/Efuse量产Trim存储设计",
+      "level": 3,
+      "parent_uid": "cat_aeqwd3",
+      "children": [],
+      "description": ""
+    },
+    "cat_6857t": {
+      "uid": "cat_6857t",
+      "id": "4.7",
+      "name": "测试模式安全管控逻辑",
+      "level": 2,
+      "parent_uid": "cat_wduhq1",
+      "children": [
+        "cat_6857"
+      ],
+      "description": ""
+    },
+    "cat_6857": {
+      "uid": "cat_6857",
+      "id": "4.7.1",
+      "name": "测试模式安全管控逻辑",
+      "level": 3,
+      "parent_uid": "cat_6857t",
+      "children": [],
+      "description": ""
+    },
+    "cat_fes3t": {
+      "uid": "cat_fes3t",
+      "id": "4.8",
+      "name": "",
+      "level": 2,
+      "parent_uid": "cat_wduhq1",
+      "children": [
+        "cat_685qw7",
+        "cat_4werc7",
+        "cat_6qweet",
+        "cat_qw2235",
+        "cat_b6qwdt",
+        "cat_sth75",
+        "cat_8sth5t"
+      ],
+      "description": ""
+    },
+    "cat_685qw7": {
+      "uid": "cat_685qw7",
+      "id": "4.8.1",
+      "name": "通信协议",
+      "level": 3,
+      "parent_uid": "cat_fes3t",
+      "children": [],
+      "description": ""
+    },
+    "cat_4werc7": {
+      "uid": "cat_4werc7",
+      "id": "4.8.2",
+      "name": "通信IO",
+      "level": 3,
+      "parent_uid": "cat_fes3t",
+      "children": [],
+      "description": ""
+    },
+    "cat_6qweet": {
+      "uid": "cat_6qweet",
+      "id": "4.8.3",
+      "name": "时钟控制",
+      "level": 3,
+      "parent_uid": "cat_fes3t",
+      "children": [],
+      "description": ""
+    },
+    "cat_qw2235": {
+      "uid": "cat_qw2235",
+      "id": "4.8.4",
+      "name": "内部控制",
+      "level": 3,
+      "parent_uid": "cat_fes3t",
+      "children": [],
+      "description": ""
+    },
+    "cat_b6qwdt": {
+      "uid": "cat_b6qwdt",
+      "id": "4.8.5",
+      "name": "模拟各功能模块",
+      "level": 3,
+      "parent_uid": "cat_fes3t",
+      "children": [],
+      "description": ""
+    },
+    "cat_sth75": {
+      "uid": "cat_sth75",
+      "id": "4.8.6",
+      "name": "存储",
+      "level": 3,
+      "parent_uid": "cat_fes3t",
+      "children": [],
+      "description": ""
+    },
+    "cat_8sth5t": {
+      "uid": "cat_8sth5t",
+      "id": "4.8.7",
+      "name": "安全",
+      "level": 3,
+      "parent_uid": "cat_fes3t",
+      "children": [],
+      "description": ""
+    },
+    "cat_48d7c7": {
+      "uid": "cat_48d7c7",
+      "id": "5",
+      "name": "接口",
+      "level": 1,
+      "parent_uid": "",
+      "children": [
+        "cat_919bba",
+        "cat_c7d060",
+        "cat_337d34"
+      ],
+      "description": "定义：数据流控制、片内外通信、安全机制与板级软硬件集成接口"
+    },
+    "cat_919bba": {
+      "uid": "cat_919bba",
+      "id": "5.1",
+      "name": "数据存储",
+      "level": 2,
+      "parent_uid": "cat_48d7c7",
+      "children": [
+        "cat_8629e9",
+        "cat_749092",
+        "cat_3c2aed",
+        "cat_c29f0d"
+      ],
+      "description": "强调：总线协议、拓扑结构及通信层的寄存器与中断软硬件桥梁"
+    },
+    "cat_8629e9": {
+      "uid": "cat_8629e9",
+      "id": "5.1.1",
+      "name": "接口类型与拓扑",
+      "level": 3,
+      "parent_uid": "cat_919bba",
+      "children": [],
+      "description": "强调：芯片支持的物理接口种类（如I2C/SPI/CAN）及引脚级拓扑连接"
+    },
+    "cat_749092": {
+      "uid": "cat_749092",
+      "id": "5.1.2",
+      "name": "通信协议与机制",
+      "level": 3,
+      "parent_uid": "cat_919bba",
+      "children": [],
+      "description": "强调：报文格式、帧结构、寻址方式等协议层硬件硬核行为"
+    },
+    "cat_3c2aed": {
+      "uid": "cat_3c2aed",
+      "id": "5.1.3",
+      "name": "通信可靠性",
+      "level": 3,
+      "parent_uid": "cat_919bba",
+      "children": [],
+      "description": ""
+    },
+    "cat_c29f0d": {
+      "uid": "cat_c29f0d",
+      "id": "5.1.4",
+      "name": "寄存器映射与中断控制机制",
+      "level": 3,
+      "parent_uid": "cat_919bba",
+      "children": [],
+      "description": ""
+    },
+    "cat_c7d060": {
+      "uid": "cat_c7d060",
+      "id": "5.2",
+      "name": "数据处理",
+      "level": 2,
+      "parent_uid": "cat_48d7c7",
+      "children": [
+        "cat_d11d7b",
+        "cat_3d3e8c",
+        "cat_97b22a"
+      ],
+      "description": "强调：硬件级加密、硬件安全区、防访问越权与防篡改"
+    },
+    "cat_d11d7b": {
+      "uid": "cat_d11d7b",
+      "id": "5.2.1",
+      "name": "数据加密与保护",
+      "level": 3,
+      "parent_uid": "cat_c7d060",
+      "children": [],
+      "description": ""
+    },
+    "cat_3d3e8c": {
+      "uid": "cat_3d3e8c",
+      "id": "5.2.2",
+      "name": "访问控制与权限",
+      "level": 3,
+      "parent_uid": "cat_c7d060",
+      "children": [],
+      "description": ""
+    },
+    "cat_97b22a": {
+      "uid": "cat_97b22a",
+      "id": "5.2.3",
+      "name": "数据完整性保障",
+      "level": 3,
+      "parent_uid": "cat_c7d060",
+      "children": [],
+      "description": ""
+    },
+    "cat_337d34": {
+      "uid": "cat_337d34",
+      "id": "5.3",
+      "name": "通信接口（硬件总线+协议+可靠性+中断体系）",
+      "level": 2,
+      "parent_uid": "cat_48d7c7",
+      "children": [
+        "cat_6b946e"
+      ],
+      "description": "强调：片上存储器配置与基本的数据预处理逻辑"
+    },
+    "cat_6b946e": {
+      "uid": "cat_6b946e",
+      "id": "5.3.2",
+      "name": "数据储存",
+      "level": 3,
+      "parent_uid": "cat_337d34",
+      "children": [],
+      "description": ""
+    },
+    "cat_e68ac8": {
+      "uid": "cat_e68ac8",
+      "id": "6",
+      "name": "可靠性",
+      "level": 1,
+      "parent_uid": "",
+      "children": [
+        "cat_8fba1c",
+        "cat_d741ed",
+        "cat_1d5500",
+        "cat_6e771d",
+        "cat_984a58"
+      ],
+      "description": "定义：高可靠性设计原则、恶劣环境适应能力与芯片防死机/自我诊断机制"
+    },
+    "cat_8fba1c": {
+      "uid": "cat_8fba1c",
+      "id": "6.1",
+      "name": "可靠性设计",
+      "level": 2,
+      "parent_uid": "cat_e68ac8",
+      "children": [
+        "cat_e1fcb3",
+        "cat_cc8cff",
+        "cat_6e991a",
+        "cat_6ae126",
+        "cat_5c8804"
+      ],
+      "description": "强调：研发阶段的健壮性设计策略与实验室原型验证规范"
+    },
+    "cat_e1fcb3": {
+      "uid": "cat_e1fcb3",
+      "id": "6.1.1",
+      "name": "冗余设计策略",
+      "level": 3,
+      "parent_uid": "cat_8fba1c",
+      "children": [],
+      "description": ""
+    },
+    "cat_cc8cff": {
+      "uid": "cat_cc8cff",
+      "id": "6.1.2",
+      "name": "降额设计规范",
+      "level": 3,
+      "parent_uid": "cat_8fba1c",
+      "children": [],
+      "description": ""
+    },
+    "cat_6e991a": {
+      "uid": "cat_6e991a",
+      "id": "6.1.3",
+      "name": "故障弱化设计 (Fail-safe)",
+      "level": 3,
+      "parent_uid": "cat_8fba1c",
+      "children": [],
+      "description": ""
+    },
+    "cat_6ae126": {
+      "uid": "cat_6ae126",
+      "id": "6.1.4",
+      "name": "可维护性设计",
+      "level": 3,
+      "parent_uid": "cat_8fba1c",
+      "children": [],
+      "description": ""
+    },
+    "cat_5c8804": {
+      "uid": "cat_5c8804",
+      "id": "6.1.5",
+      "name": "设计验证测试",
+      "level": 3,
+      "parent_uid": "cat_8fba1c",
+      "children": [],
+      "description": "DVT"
+    },
+    "cat_d741ed": {
+      "uid": "cat_d741ed",
+      "id": "6.2",
+      "name": "电气安全防护",
+      "level": 2,
+      "parent_uid": "cat_e68ac8",
+      "children": [
+        "cat_259a68",
+        "cat_af5714",
+        "cat_aecee1",
+        "cat_282d04",
+        "cat_afc0b8"
+      ],
+      "description": "强调：芯片级针对过压、过流、瞬间浪涌和静态电(ESD)的硬件防护，本章不包含寄存器编程控制"
+    },
+    "cat_259a68": {
+      "uid": "cat_259a68",
+      "id": "6.2.1",
+      "name": "过压/欠压/过流/过温保护硬性指标",
+      "level": 3,
+      "parent_uid": "cat_d741ed",
+      "children": [],
+      "description": ""
+    },
+    "cat_af5714": {
+      "uid": "cat_af5714",
+      "id": "6.2.2",
+      "name": "ESD防护与抗闩锁 (Latchup) 能力规格",
+      "level": 3,
+      "parent_uid": "cat_d741ed",
+      "children": [],
+      "description": ""
+    },
+    "cat_aecee1": {
+      "uid": "cat_aecee1",
+      "id": "6.2.3",
+      "name": "浪涌与瞬态电压防护等级",
+      "level": 3,
+      "parent_uid": "cat_d741ed",
+      "children": [],
+      "description": ""
+    },
+    "cat_282d04": {
+      "uid": "cat_282d04",
+      "id": "6.2.4",
+      "name": "输入短路/反向物理防护设计",
+      "level": 3,
+      "parent_uid": "cat_d741ed",
+      "children": [],
+      "description": ""
+    },
+    "cat_afc0b8": {
+      "uid": "cat_afc0b8",
+      "id": "6.2.5",
+      "name": "可编程保护功能与控制逻辑",
+      "level": 3,
+      "parent_uid": "cat_d741ed",
+      "children": [],
+      "description": ""
+    },
+    "cat_1d5500": {
+      "uid": "cat_1d5500",
+      "id": "6.3",
+      "name": "环境适应性",
+      "level": 2,
+      "parent_uid": "cat_e68ac8",
+      "children": [
+        "cat_cfea78",
+        "cat_df2c11",
+        "cat_59b7e0",
+        "cat_882fdd"
+      ],
+      "description": "强调：温度、湿度、电磁兼容(EMC/EMI)等环境耐受性及外壳物理防护"
+    },
+    "cat_cfea78": {
+      "uid": "cat_cfea78",
+      "id": "6.3.1",
+      "name": "温度与湿度环境适应性",
+      "level": 3,
+      "parent_uid": "cat_1d5500",
+      "children": [],
+      "description": ""
+    },
+    "cat_df2c11": {
+      "uid": "cat_df2c11",
+      "id": "6.3.2",
+      "name": "振动与冲击防护",
+      "level": 3,
+      "parent_uid": "cat_1d5500",
+      "children": [],
+      "description": ""
+    },
+    "cat_59b7e0": {
+      "uid": "cat_59b7e0",
+      "id": "6.3.3",
+      "name": "电磁兼容性",
+      "level": 3,
+      "parent_uid": "cat_1d5500",
+      "children": [],
+      "description": ""
+    },
+    "cat_882fdd": {
+      "uid": "cat_882fdd",
+      "id": "6.3.4",
+      "name": "防尘防水设计",
+      "level": 3,
+      "parent_uid": "cat_1d5500",
+      "children": [],
+      "description": ""
+    },
+    "cat_6e771d": {
+      "uid": "cat_6e771d",
+      "id": "6.4",
+      "name": "故障检测与诊断",
+      "level": 2,
+      "parent_uid": "cat_e68ac8",
+      "children": [
+        "cat_ec3704",
+        "cat_3c2b5a",
+        "cat_889ecc",
+        "cat_6a0998"
+      ],
+      "description": "强调：运行时的在线监控、错误报告机制与系统自动恢复策略"
+    },
+    "cat_ec3704": {
+      "uid": "cat_ec3704",
+      "id": "6.4.1",
+      "name": "实时监控机制",
+      "level": 3,
+      "parent_uid": "cat_6e771d",
+      "children": [],
+      "description": ""
+    },
+    "cat_3c2b5a": {
+      "uid": "cat_3c2b5a",
+      "id": "6.4.2",
+      "name": "故障诊断策略",
+      "level": 3,
+      "parent_uid": "cat_6e771d",
+      "children": [],
+      "description": ""
+    },
+    "cat_889ecc": {
+      "uid": "cat_889ecc",
+      "id": "6.4.3",
+      "name": "故障响应与恢复",
+      "level": 3,
+      "parent_uid": "cat_6e771d",
+      "children": [],
+      "description": ""
+    },
+    "cat_6a0998": {
+      "uid": "cat_6a0998",
+      "id": "6.4.4",
+      "name": "故障记录与上报",
+      "level": 3,
+      "parent_uid": "cat_6e771d",
+      "children": [],
+      "description": ""
+    },
+    "cat_984a58": {
+      "uid": "cat_984a58",
+      "id": "6.5",
+      "name": "长期稳定性保障",
+      "level": 2,
+      "parent_uid": "cat_e68ac8",
+      "children": [
+        "cat_85cfe5",
+        "cat_10cceb",
+        "cat_27f411",
+        "cat_fad8c7"
+      ],
+      "description": "强调：针对芯片长期服役过程中的温漂、老化与寿命监控要求"
+    },
+    "cat_85cfe5": {
+      "uid": "cat_85cfe5",
+      "id": "6.5.1",
+      "name": "长期漂移特性",
+      "level": 3,
+      "parent_uid": "cat_984a58",
+      "children": [],
+      "description": ""
+    },
+    "cat_10cceb": {
+      "uid": "cat_10cceb",
+      "id": "6.5.2",
+      "name": "老化机制分析",
+      "level": 3,
+      "parent_uid": "cat_984a58",
+      "children": [],
+      "description": ""
+    },
+    "cat_27f411": {
+      "uid": "cat_27f411",
+      "id": "6.5.3",
+      "name": "维护周期规划",
+      "level": 3,
+      "parent_uid": "cat_984a58",
+      "children": [],
+      "description": ""
+    },
+    "cat_fad8c7": {
+      "uid": "cat_fad8c7",
+      "id": "6.5.4",
+      "name": "性能退化监控",
+      "level": 3,
+      "parent_uid": "cat_984a58",
+      "children": [],
+      "description": ""
+    },
+    "cat_931650": {
+      "uid": "cat_931650",
+      "id": "7",
+      "name": "可生产性",
+      "level": 1,
+      "parent_uid": "",
+      "children": [
+        "cat_45aea9",
+        "cat_7d62a5",
+        "cat_8b94b2",
+        "cat_35b867",
+        "cat_bb8ec5",
+        "cat_c46dde",
+        "cat_81c648"
+      ],
+      "description": "定义：面向晶圆厂、封测厂的量产可制造性要求、资质认证以及成本与供应链管理"
+    },
+    "cat_45aea9": {
+      "uid": "cat_45aea9",
+      "id": "7.1",
+      "name": "晶圆与工艺规格",
+      "level": 2,
+      "parent_uid": "cat_931650",
+      "children": [
+        "cat_8cd59c",
+        "cat_b200db",
+        "cat_f3cbeb",
+        "cat_16af1e"
+      ],
+      "description": "强调：包括晶圆尺寸、工艺节点、功率限制等"
+    },
+    "cat_8cd59c": {
+      "uid": "cat_8cd59c",
+      "id": "7.1.1",
+      "name": "晶圆尺寸",
+      "level": 3,
+      "parent_uid": "cat_45aea9",
+      "children": [],
+      "description": ""
+    },
+    "cat_b200db": {
+      "uid": "cat_b200db",
+      "id": "7.1.2",
+      "name": "工艺节点",
+      "level": 3,
+      "parent_uid": "cat_45aea9",
+      "children": [],
+      "description": ""
+    },
+    "cat_f3cbeb": {
+      "uid": "cat_f3cbeb",
+      "id": "7.1.3",
+      "name": "功率限制",
+      "level": 3,
+      "parent_uid": "cat_45aea9",
+      "children": [],
+      "description": ""
+    },
+    "cat_16af1e": {
+      "uid": "cat_16af1e",
+      "id": "7.1.4",
+      "name": "其他工艺限制",
+      "level": 3,
+      "parent_uid": "cat_45aea9",
+      "children": [],
+      "description": ""
+    },
+    "cat_7d62a5": {
+      "uid": "cat_7d62a5",
+      "id": "7.2",
+      "name": "封装结构",
+      "level": 2,
+      "parent_uid": "cat_931650",
+      "children": [
+        "cat_7d98d2",
+        "cat_890bf9",
+        "cat_32d04d",
+        "cat_4169d1",
+        "cat_3c1a06"
+      ],
+      "description": "强调：物理管脚定义、封测厂出厂修调(Trim)与芯片硬编码版本标识(ID)"
+    },
+    "cat_7d98d2": {
+      "uid": "cat_7d98d2",
+      "id": "7.2.1",
+      "name": "封装形式与外壳物理尺寸 (如 VQFN32, 4x4mm)",
+      "level": 3,
+      "parent_uid": "cat_7d62a5",
+      "children": [],
+      "description": ""
+    },
+    "cat_890bf9": {
+      "uid": "cat_890bf9",
+      "id": "7.2.2",
+      "name": "出厂标定与修调 (Trim) 要求",
+      "level": 3,
+      "parent_uid": "cat_7d62a5",
+      "children": [],
+      "description": "注：指封测厂 ATE 机台上的物理修调工艺及出厂参数固化行为"
+    },
+    "cat_32d04d": {
+      "uid": "cat_32d04d",
+      "id": "7.2.3",
+      "name": "引脚定义与物理布局 (含焊盘EPAD、引脚Pitch、测试引脚排布)",
+      "level": 3,
+      "parent_uid": "cat_7d62a5",
+      "children": [],
+      "description": ""
+    },
+    "cat_4169d1": {
+      "uid": "cat_4169d1",
+      "id": "7.2.4",
+      "name": "封装可靠性与材料 (含绑定线材质、MSL等级)",
+      "level": 3,
+      "parent_uid": "cat_7d62a5",
+      "children": [],
+      "description": ""
+    },
+    "cat_3c1a06": {
+      "uid": "cat_3c1a06",
+      "id": "7.2.5",
+      "name": "芯片硬标识 (Chip ID/UID/版本寄存器物理存在形式)",
+      "level": 3,
+      "parent_uid": "cat_7d62a5",
+      "children": [],
+      "description": ""
+    },
+    "cat_8b94b2": {
+      "uid": "cat_8b94b2",
+      "id": "7.3",
+      "name": "生产测试",
+      "level": 2,
+      "parent_uid": "cat_931650",
+      "children": [
+        "cat_9cb7e2",
+        "cat_f60517"
+      ],
+      "description": "强调：封测厂自动测试机台(ATE)上的量产测试覆盖率与良率筛查测试（非研发DVT）"
+    },
+    "cat_9cb7e2": {
+      "uid": "cat_9cb7e2",
+      "id": "7.3.1",
+      "name": "晶圆测试(CP测试)",
+      "level": 3,
+      "parent_uid": "cat_8b94b2",
+      "children": [],
+      "description": "注：仅限晶圆划片前的 ATE 机台针测工艺及 Probe Card 阶段量产筛查指标"
+    },
+    "cat_f60517": {
+      "uid": "cat_f60517",
+      "id": "7.3.2",
+      "name": "封装测试(FT测试)",
+      "level": 3,
+      "parent_uid": "cat_8b94b2",
+      "children": [],
+      "description": "注：仅限芯片封装成品后的 ATE 机台最终量产测试与良率控制边界"
+    },
+    "cat_35b867": {
+      "uid": "cat_35b867",
+      "id": "7.4",
+      "name": "合规认证",
+      "level": 2,
+      "parent_uid": "cat_931650",
+      "children": [
+        "cat_91e175",
+        "cat_c209f3",
+        "cat_82e430",
+        "cat_697a76",
+        "cat_bb4580"
+      ],
+      "description": "强调：各行业准入资格认证、环保RoHS、车规AEC-Q100及IP合规"
+    },
+    "cat_91e175": {
+      "uid": "cat_91e175",
+      "id": "7.4.1",
+      "name": "安全认证",
+      "level": 3,
+      "parent_uid": "cat_35b867",
+      "children": [],
+      "description": ""
+    },
+    "cat_c209f3": {
+      "uid": "cat_c209f3",
+      "id": "7.4.2",
+      "name": "环保合规",
+      "level": 3,
+      "parent_uid": "cat_35b867",
+      "children": [],
+      "description": ""
+    },
+    "cat_82e430": {
+      "uid": "cat_82e430",
+      "id": "7.4.3",
+      "name": "质量体系认证",
+      "level": 3,
+      "parent_uid": "cat_35b867",
+      "children": [],
+      "description": ""
+    },
+    "cat_697a76": {
+      "uid": "cat_697a76",
+      "id": "7.4.4",
+      "name": "行业特定认证",
+      "level": 3,
+      "parent_uid": "cat_35b867",
+      "children": [],
+      "description": ""
+    },
+    "cat_bb4580": {
+      "uid": "cat_bb4580",
+      "id": "7.4.5",
+      "name": "知识产权与标准",
+      "level": 3,
+      "parent_uid": "cat_35b867",
+      "children": [],
+      "description": "芯片在设计、量产与出海过程中的知识产权合规性、专利风险防范以及行业标准授权要求。"
+    },
+    "cat_bb8ec5": {
+      "uid": "cat_bb8ec5",
+      "id": "7.5",
+      "name": "成本控制",
+      "level": 2,
+      "parent_uid": "cat_931650",
+      "children": [
+        "cat_2ea8a0",
+        "cat_07a489",
+        "cat_9672dd",
+        "cat_cf1e5d",
+        "cat_e59c20"
+      ],
+      "description": "强调：涵盖掩膜(Mask)费用、Wafer单价、测试费用的全生命周期成本管控"
+    },
+    "cat_2ea8a0": {
+      "uid": "cat_2ea8a0",
+      "id": "7.5.1",
+      "name": "设计成本",
+      "level": 3,
+      "parent_uid": "cat_bb8ec5",
+      "children": [],
+      "description": ""
+    },
+    "cat_07a489": {
+      "uid": "cat_07a489",
+      "id": "7.5.2",
+      "name": "芯片成本",
+      "level": 3,
+      "parent_uid": "cat_bb8ec5",
+      "children": [],
+      "description": ""
+    },
+    "cat_9672dd": {
+      "uid": "cat_9672dd",
+      "id": "7.5.3",
+      "name": "长期成本",
+      "level": 3,
+      "parent_uid": "cat_bb8ec5",
+      "children": [],
+      "description": ""
+    },
+    "cat_cf1e5d": {
+      "uid": "cat_cf1e5d",
+      "id": "7.5.4",
+      "name": "测试成本",
+      "level": 3,
+      "parent_uid": "cat_bb8ec5",
+      "children": [],
+      "description": ""
+    },
+    "cat_e59c20": {
+      "uid": "cat_e59c20",
+      "id": "7.5.5",
+      "name": "其他成本",
+      "level": 3,
+      "parent_uid": "cat_bb8ec5",
+      "children": [],
+      "description": ""
+    },
+    "cat_c46dde": {
+      "uid": "cat_c46dde",
+      "id": "7.6",
+      "name": "量产品质与交付",
+      "level": 2,
+      "parent_uid": "cat_931650",
+      "children": [
+        "cat_966c67",
+        "cat_c8ddc9",
+        "cat_1aabad",
+        "cat_ae9d22",
+        "cat_26d7cb"
+      ],
+      "description": "强调：量产后的DPPM控制、产能扩充规划、版本升级规范与产品可追溯性"
+    },
+    "cat_966c67": {
+      "uid": "cat_966c67",
+      "id": "7.6.1",
+      "name": "品质管控指标",
+      "level": 3,
+      "parent_uid": "cat_c46dde",
+      "children": [],
+      "description": ""
+    },
+    "cat_c8ddc9": {
+      "uid": "cat_c8ddc9",
+      "id": "7.6.2",
+      "name": "产能要求",
+      "level": 3,
+      "parent_uid": "cat_c46dde",
+      "children": [],
+      "description": ""
+    },
+    "cat_1aabad": {
+      "uid": "cat_1aabad",
+      "id": "7.6.3",
+      "name": "量产良率要求",
+      "level": 3,
+      "parent_uid": "cat_c46dde",
+      "children": [],
+      "description": ""
+    },
+    "cat_ae9d22": {
+      "uid": "cat_ae9d22",
+      "id": "7.6.4",
+      "name": "批次追溯与物料管理",
+      "level": 3,
+      "parent_uid": "cat_c46dde",
+      "children": [],
+      "description": ""
+    },
+    "cat_26d7cb": {
+      "uid": "cat_26d7cb",
+      "id": "7.6.5",
+      "name": "版本迭代与升级规范",
+      "level": 3,
+      "parent_uid": "cat_c46dde",
+      "children": [],
+      "description": ""
+    },
+    "cat_81c648": {
+      "uid": "cat_81c648",
+      "id": "7.7",
+      "name": "供应链与生命周期管理",
+      "level": 2,
+      "parent_uid": "cat_931650",
+      "children": [
+        "cat_2535f8",
+        "cat_199b9c",
+        "cat_d8c447"
+      ],
+      "description": "强调：晶圆/封测代工厂风险管控、仓储物流要求与停产(EOL)管理规范"
+    },
+    "cat_2535f8": {
+      "uid": "cat_2535f8",
+      "id": "7.7.1",
+      "name": "供应商可靠性认证",
+      "level": 3,
+      "parent_uid": "cat_81c648",
+      "children": [],
+      "description": ""
+    },
+    "cat_199b9c": {
+      "uid": "cat_199b9c",
+      "id": "7.7.2",
+      "name": "存储与运输防护",
+      "level": 3,
+      "parent_uid": "cat_81c648",
+      "children": [],
+      "description": ""
+    },
+    "cat_d8c447": {
+      "uid": "cat_d8c447",
+      "id": "7.7.3",
+      "name": "报废与回收规范",
+      "level": 3,
+      "parent_uid": "cat_81c648",
+      "children": [],
+      "description": ""
+    }
+  }
+}
