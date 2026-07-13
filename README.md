@@ -1,9 +1,9 @@
 # SemiReq-Hub: AI-Powered Chip Requirement Lifecycle Manager
 
-**AI驱动的芯片需求全生命周期管理系统**
-
-用 LLM 将散乱的芯片需求自动分类、匹配模板、建立追溯链、生成结构化报表。
-从 0 到 1 独立开发，在真实工业场景中处理了 **40+ 芯片项目、2000+ 条需求**。
+> **AI驱动的芯片需求全生命周期管理系统**
+>
+> 用 LLM 将散乱的芯片需求自动分类、匹配模板、建立追溯链、生成结构化报表。
+> 从 0 到 1 独立开发，在真实工业场景中处理了 **40+ 芯片项目、2000+ 条需求**。
 
 [English](#english) | [中文](#chinese)
 
@@ -176,6 +176,7 @@ No more manual maintenance of `categories.dbV4.1.json`.
 #### Key Changes
 
 **1. LLM Client (`src/llm_client.py`)**
+
 - Replaced manual `OpenAI()` calls with `ChatOpenAI()` from `langchain-openai`
 - Added built-in retry (`max_retries=3`) and timeout (`timeout=30`)
 - Implemented automatic fallback between local and cloud models using `.with_fallbacks()`
@@ -185,6 +186,7 @@ No more manual maintenance of `categories.dbV4.1.json`.
 - Added `_ensure_models_initialized()` guard method for deferred initialization
 
 **2. Pydantic Output Models**
+
 - `CategorizationResult` — Classification output with `category_uid`, `confidence`, `requirement_level`
 - `TemplateMatchResult` — Template matching output with `match_type`, `extracted_variables`
 - `TemplateVariable` — Variable definition with `name`, `type`, `label`, `unit`
@@ -193,11 +195,13 @@ No more manual maintenance of `categories.dbV4.1.json`.
 - Each model includes a `get_format_instructions()` class method for generating JSON format prompts
 
 **3. Prompt Architecture**
+
 - System instruction + Human message separation using `ChatPromptTemplate.from_messages()`
 - **Custom format instructions** instead of `JsonOutputParser.get_format_instructions()` for better compatibility
 - Supports template variables with proper escaping
 
 **4. Fixed Issues**
+
 - **ImportError**: Replaced `from langchain.output_parsers import JsonOutputParser` with custom format instructions
 - **Double prompt wrapping**: Removed `ChatPromptTemplate` from individual modules, centralized in `llm_client.py`
 - **LLM connection on import**: Implemented lazy loading to defer model initialization
@@ -283,17 +287,6 @@ python main.py
 
 ---
 
-## ⚠️ Before Uploading to GitHub
-
-**IMPORTANT**: Check that `src/llm_client.py` does NOT contain hardcoded API keys. All keys should be loaded from environment variables.
-
-```bash
-# Run this check before committing
-grep -rn "sk-" src/ main.py script/
-```
-
----
-
 ## License
 
 MIT License
@@ -301,5 +294,5 @@ MIT License
 ## Author
 
 **Chen Mo (陈默)** — *Intern, System Engineering*
-- Project Period: 2026.04 - 2026.07#   I R L T 
- 
+
+- Project Period: 2026.04 - 2026.07# IRLT
