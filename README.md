@@ -1,3 +1,4 @@
+
 # SemiReq-Hub: AI-Powered Chip Requirement Lifecycle Manager
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
@@ -306,5 +307,5 @@ MIT License
 ## Author
 
 **Chen Mo (陈默)** — *Intern, System Engineering*
-- Project Period: 2026.04 - 2026.07#   I R L T  
+- Project Period: 2026.04 - 2026.07#   I R L T 
  
