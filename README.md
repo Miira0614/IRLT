@@ -1,10 +1,5 @@
 # SemiReq-Hub: AI-Powered Chip Requirement Lifecycle Manager
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
-[![LangChain](https://img.shields.io/badge/LangChain-0.2+-orange.svg)](https://www.langchain.com/)
-[![LLM](https://img.shields.io/badge/LLM-DeepSeek--R1%20%7C%20Qwen-green.svg)]()
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)]()
-
 > **AI驱动的芯片需求全生命周期管理系统**
 >
 > 用 LLM 将散乱的芯片需求自动分类、匹配模板、建立追溯链、生成结构化报表。
