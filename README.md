@@ -1,4 +1,4 @@
-# SemiReq-Hub: AI-Powered Chip Requirement Lifecycle Manager
+# IRLT: AI-Powered Chip Requirement Lifecycle Manager
 
 > **AI驱动的芯片需求全生命周期管理系统**
 >
